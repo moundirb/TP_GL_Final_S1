@@ -119,8 +119,8 @@ while ($row = $stmt_tasks->fetch(PDO::FETCH_ASSOC)) {
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Tivo is a HTML landing page template built with Bootstrap to help you crate engaging presentations for SaaS apps and convert visitors into users.">
-    <meta name="author" content="Inovatik">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
     <!-- OG Meta Tags to improve the way the post looks when you share the page on LinkedIn, Facebook, Google+ -->
 	<meta property="og:site_name" content="" /> <!-- website name -->
@@ -383,7 +383,6 @@ if ($result->num_rows > 0) {
 // Close the database connection
 $conn->close();
 ?>
-
 <script type="text/javascript">
     google.charts.load('current', {'packages':['gantt']});
     google.charts.setOnLoadCallback(drawChart);
@@ -403,17 +402,28 @@ $conn->close();
         data.addRows(<?php echo json_encode($gantdata); ?>);
 
         var options = {
-            height: 275
+            gantt: {
+                trackHeight: 30, // Adjust the track height as needed
+            },
+            width: '100%', // Make the chart width 100% of the container
+            criticalPathEnabled: true // Enable critical path highlighting
         };
 
         var chart = new google.visualization.Gantt(document.getElementById('chart_div'));
 
+        // Event listener for window resize to redraw the chart
+        window.addEventListener('resize', function() {
+            chart.draw(data, options);
+        });
+
+        // Draw the chart initially
         chart.draw(data, options);
 
         // Calculate and display margins for each task
         displayTaskMargins(data);
     }
 </script>
+
 <p style="color: #3D3B40;
           font-size: 20px;">Gantt Chart:</p>
 <div id="chart_div" style="border: 1px solid black; width: 100%; height: 400px; position: relative; -webkit-tap-highlight-color: rgba(255, 255, 255, 0);margin-top: 24px;">
