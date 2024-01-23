@@ -123,7 +123,7 @@ include 'db.php'?>
                     <!-- Video Preview -->
                     <div class="image-container">
                         <div class="video-wrapper">
-                            <a class="popup-youtube" href="https://www.youtube.com/watch?v=LOBOJQocArs" data-effect="fadeIn">
+                            <a class="popup-youtube" href="https://www.youtube.com/watch?v=kQZzP4BYRH4" data-effect="fadeIn">
                                 <img class="img-fluid" src="images/video-image.png" alt="alternative">
                                 <span class="video-play-button">
                                     <span></span>

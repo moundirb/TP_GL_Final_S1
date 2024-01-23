@@ -427,10 +427,7 @@ $conn->close();
 </div>
   
   </div>
-  <div style="margin-top: 20px;">
-    <!-- Add your code for calculating margins here -->
-    <!-- For example, you can use JavaScript to perform calculations -->
-</div>
+
 <!-- marges total and libre -->
   <table>
     <th>Task Name</th><?php
@@ -490,6 +487,7 @@ while ($row7 = $stmt_tasks7->fetch(PDO::FETCH_ASSOC)) {
         $chq=array();
         $imade=$latestay788-$latestay789;
          $imadediv=$imade/86400;
+       
          if ($imadediv==0){
         array_push($chq , $row6['Nom_tache']);
          }
