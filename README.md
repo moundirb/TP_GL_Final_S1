@@ -16,3 +16,4 @@
 4. Run the Application:
     - Place the project in the `htdocs` directory of XAMPP.
     - Access the project in your browser (`http://localhost/TP_GL_Final_S1`).
+# [Watch Tutorial](https://www.youtube.com/watch?v=kQZzP4BYRH4)
